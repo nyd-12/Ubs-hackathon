@@ -1,62 +1,52 @@
-# My React App
+# RedBot Chat UI
 
-This is a simple React application with a landing page.
+A simple, full-page React chatbot UI inspired by ChatGPT, styled in red, white, and black.
+
+## Features
+
+- Modern, responsive chat layout
+- Red/white/black color scheme
+- Type and send messages (no backend)
+- Clean component structure with separate CSS files
 
 ## Getting Started
 
-To get started with this project, follow the instructions below.
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js (version 14 or higher)
-- npm (comes with Node.js)
-
-### Installation
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/your-username/my-react-app.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```
-   cd my-react-app
-   ```
-
-3. Install the dependencies:
-
+1. **Install dependencies:**
    ```
    npm install
    ```
 
-### Running the Application
+2. **Start the development server:**
+   ```
+   npm start
+   ```
 
-To start the development server, run:
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
 
 ```
-npm start
+src/
+  components/
+    Header.tsx
+    ChatArea.tsx
+    ChatInput.tsx
+    Message.tsx
+  styles/
+    Header.css
+    ChatArea.css
+    ChatInput.css
+    Message.css
+    index.css
+  App.tsx
+  index.tsx
 ```
 
-This will open the application in your default web browser at `http://localhost:3000`.
+## Customization
 
-### Project Structure
+- Edit styles in `src/styles/` to change the look and feel.
+- Add backend/chatbot logic as needed.
 
-- `src/`: Contains the source code for the application.
-  - `App.tsx`: Main component that renders the landing page.
-  - `index.tsx`: Entry point of the application.
-  - `components/`: Contains React components.
-    - `LandingPage.tsx`: Functional component for the landing page.
-  - `styles/`: Contains CSS styles.
-    - `LandingPage.module.css`: Styles specific to the LandingPage component.
-- `public/`: Contains static files.
-  - `index.html`: Main HTML file for the application.
-- `tsconfig.json`: TypeScript configuration file.
-- `package.json`: npm configuration file.
+---
 
-### License
-
-This project is licensed under the MIT License.
+Made with ❤️ using
