@@ -1,0 +1,16 @@
+.header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    font-weight: 700;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #ff2d2d;
+    text-align: left;
+}
+.header-red {
+    color: #ff2d2d;
+}
+.header-white {
+    color: #fff;
+}
