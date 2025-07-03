@@ -23,3 +23,311 @@ body {
     background: rgba(255,255,255,0.03);
     overflow: hidden;
 }
+
+/* Light mode for the whole app */
+.app-light {
+    background: linear-gradient(135deg, #fff 0%, #f9f6f6 40%, #ffe5e5 70%, #ff2d2d 100%);
+    color: #c2001a;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+.app-light .main-content {
+    background: linear-gradient(120deg, #fff 60%, #f9f6f6 100%);
+    color: #c2001a;
+    box-shadow: 0 8px 32px 0 rgba(255,45,45,0.10), 0 1.5px 8px 0 #ff2d2d22;
+    border-radius: 32px 32px 0 0;
+    margin-top: 24px;
+    padding-bottom: 24px;
+}
+.app-light .chat-area {
+    background: linear-gradient(120deg, #fff 80%, #f7f7f7 100%);
+    color: #c2001a;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px 0 rgba(255,45,45,0.10);
+    border: 1.5px solid #ff2d2d22;
+}
+.app-light .chat-empty {
+    color: #ff2d2d99;
+    font-weight: 500;
+    background: #f9f6f6;
+    border-radius: 16px;
+    margin: 0 1.5rem;
+}
+.app-light .chat-input-form {
+    background: linear-gradient(90deg, #fff 70%, #f9f6f6 100%);
+    border-top: 2px solid #ff2d2d;
+    box-shadow: 0 4px 24px 0 rgba(255,45,45,0.10);
+    border-radius: 18px 18px 0 0;
+}
+.app-light .chat-input {
+    background: #f7f7f7;
+    color: #c2001a;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    border: 1.5px solid #ff2d2d22;
+    font-weight: 500;
+}
+.app-light .chat-input:focus {
+    box-shadow: 0 0 0 2px #ff2d2d55;
+    border-color: #ff2d2d;
+    background: #fff;
+}
+.app-light .chat-send-btn {
+    background: linear-gradient(90deg, #ff2d2d 60%, #fff 100%);
+    color: #fff;
+    border: 1.5px solid #ff2d2d;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px #ff2d2d44;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.app-light .chat-send-btn:hover {
+    background: linear-gradient(90deg, #fff 60%, #ff2d2d 100%);
+    color: #ff2d2d;
+    border: 1.5px solid #ff2d2d;
+    box-shadow: 0 4px 16px 0 #ff2d2d33;
+}
+.app-light .header {
+    background: linear-gradient(90deg, #fff 80%, #f9f6f6 100%);
+    color: #c2001a;
+    border-bottom: 2.5px solid #ff2d2d;
+    box-shadow: 0 2px 12px 0 rgba(255,45,45,0.08);
+    border-radius: 0 0 24px 24px;
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI Semibold', 'Roboto', Arial, sans-serif;
+}
+.app-light .header-red {
+    color: #ff2d2d;
+    text-shadow: 0 2px 8px #ff2d2d33;
+}
+.app-light .header-white {
+    color: #c2001a;
+    text-shadow: 0 2px 8px #ff2d2d22;
+}
+.app-light .message.user {
+    background: linear-gradient(90deg, #ff2d2d 80%, #fff 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    border-radius: 18px 18px 4px 18px;
+    font-weight: 600;
+}
+.app-light .message.bot {
+    background: linear-gradient(90deg, #f7f7f7 80%, #fff 100%);
+    color: #c2001a;
+    border: 1.5px solid #ff2d2d22;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.06);
+    border-radius: 18px 18px 18px 4px;
+    font-weight: 500;
+}
+.app-light .drawer-light {
+    background: linear-gradient(120deg, #fff 80%, #f9f6f6 100%);
+    color: #c2001a;
+    box-shadow: 2px 0 16px 0 rgba(255,45,45,0.10);
+    border-radius: 0 24px 24px 0;
+}
+.app-light .drawer-light .drawer-header {
+    background: linear-gradient(90deg, #fff 80%, #f9f6f6 100%);
+    color: #c2001a;
+    border-bottom: 2px solid #ff2d2d;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 0 24px 0 0;
+}
+.app-light .drawer-light .drawer-close {
+    color: #ff2d2d;
+}
+.app-light .drawer-light .drawer-item {
+    border-bottom: 1px solid #ff2d2d22;
+    color: #c2001a;
+    background: #f7f7f7;
+    font-weight: 500;
+    border-radius: 12px;
+    margin: 0 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.app-light .drawer-light .drawer-item:hover {
+    background: linear-gradient(90deg, #ff2d2d11 60%, #fff 100%);
+    color: #ff2d2d;
+}
+.app-light .drawer-light .drawer-empty {
+    color: #ff2d2d88;
+    font-weight: 500;
+    background: #f9f6f6;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+/* Dark mode for the whole app */
+.app-dark {
+    background: linear-gradient(135deg, #18171c 0%, #2a1a1a 100%);
+    color: #fff;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+.app-dark .main-content {
+    background: rgba(24, 23, 28, 0.92);
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+    border-radius: 32px 32px 0 0;
+    margin-top: 24px;
+    padding-bottom: 24px;
+}
+.app-dark .chat-area {
+    background: linear-gradient(120deg, #23232a 80%, #18171c 100%);
+    color: #fff;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    border: 1.5px solid #292929;
+}
+.app-dark .chat-empty {
+    color: #bbb;
+    font-weight: 500;
+    background: #23232a;
+    border-radius: 16px;
+    margin: 0 1.5rem;
+}
+.app-dark .chat-input-form {
+    background: linear-gradient(90deg, #23232a 70%, #18171c 100%);
+    border-top: 2px solid #ff2d2d;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    border-radius: 18px 18px 0 0;
+}
+.app-dark .chat-input {
+    background: #18171c;
+    color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border: 1.5px solid #292929;
+    font-weight: 500;
+}
+.app-dark .chat-input:focus {
+    box-shadow: 0 0 0 2px #ff2d2d55;
+    border-color: #ff2d2d;
+    background: #23232a;
+}
+.app-dark .chat-send-btn {
+    background: linear-gradient(90deg, #ff2d2d 60%, #23232a 100%);
+    color: #fff;
+    border: 1.5px solid #ff2d2d;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px #ff2d2d44;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.app-dark .chat-send-btn:hover {
+    background: linear-gradient(90deg, #23232a 60%, #ff2d2d 100%);
+    color: #ff2d2d;
+    border: 1.5px solid #ff2d2d;
+    box-shadow: 0 4px 16px 0 #ff2d2d33;
+}
+.app-dark .header {
+    background: linear-gradient(90deg, #18171c 80%, #2a1a1a 100%);
+    color: #fff;
+    border-bottom: 2.5px solid #ff2d2d;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
+    border-radius: 0 0 24px 24px;
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+    font-family: 'Segoe UI Semibold', 'Roboto', Arial, sans-serif;
+}
+.app-dark .header-red {
+    color: #ff2d2d;
+    text-shadow: 0 2px 8px #ff2d2d33;
+}
+.app-dark .header-white {
+    color: #fff;
+    text-shadow: 0 2px 8px #ff2d2d22;
+}
+.app-dark .message.user {
+    background: linear-gradient(90deg, #ff2d2d 80%, #23232a 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    border-radius: 18px 18px 4px 18px;
+    font-weight: 600;
+}
+.app-dark .message.bot {
+    background: linear-gradient(90deg, #23232a 80%, #18171c 100%);
+    color: #fff;
+    border: 1.5px solid #292929;
+    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.06);
+    border-radius: 18px 18px 18px 4px;
+    font-weight: 500;
+}
+.app-dark .drawer-dark {
+    background: linear-gradient(120deg, #23232a 80%, #18171c 100%);
+    color: #fff;
+    box-shadow: 2px 0 16px 0 rgba(0,0,0,0.18);
+    border-radius: 0 24px 24px 0;
+}
+.app-dark .drawer-dark .drawer-header {
+    background: linear-gradient(90deg, #18171c 80%, #2a1a1a 100%);
+    color: #fff;
+    border-bottom: 2px solid #ff2d2d;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 0 24px 0 0;
+}
+.app-dark .drawer-dark .drawer-close {
+    color: #ff2d2d;
+}
+.app-dark .drawer-dark .drawer-item {
+    border-bottom: 1px solid #292929;
+    color: #fff;
+    background: #23232a;
+    font-weight: 500;
+    border-radius: 12px;
+    margin: 0 8px;
+    transition: background 0.2s, color 0.2s;
+}
+.app-dark .drawer-dark .drawer-item:hover {
+    background: linear-gradient(90deg, #ff2d2d22 60%, #23232a 100%);
+    color: #ff2d2d;
+}
+.app-dark .drawer-dark .drawer-empty {
+    color: #bbb;
+    font-weight: 500;
+    background: #23232a;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+/* Mode switch styles */
+.mode-switch {
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 32px;
+}
+.mode-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.mode-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 32px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 4px;
+}
+.mode-switch .slider svg {
+    transition: transform 0.3s;
+    transform: translateX(0);
+    display: block;
+}
+.mode-switch input:checked + .slider {
+    background: #232323;
+    justify-content: flex-end;
+}
+.mode-switch input:checked + .slider svg {
+    transform: translateX(20px) rotate(-20deg);
+}

@@ -55,3 +55,53 @@
     text-align: center;
     padding: 2rem 0;
 }
+
+/* Light mode: only white and red */
+.drawer-light {
+    background: #fff;
+    color: #ff2d2d;
+    box-shadow: 2px 0 16px rgba(255,45,45,0.10);
+}
+.drawer-light .drawer-header {
+    background: #fff;
+    color: #ff2d2d;
+    border-bottom: 2px solid #ff2d2d;
+}
+.drawer-light .drawer-close {
+    color: #ff2d2d;
+}
+.drawer-light .drawer-item {
+    border-bottom: 1px solid #ff2d2d22;
+    color: #ff2d2d;
+}
+.drawer-light .drawer-item:hover {
+    background: #ff2d2d11;
+}
+.drawer-light .drawer-empty {
+    color: #ff2d2d88;
+}
+
+/* Dark mode: original, but more contrast */
+.drawer-dark {
+    background: #232323;
+    color: #fff;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+}
+.drawer-dark .drawer-header {
+    background: #1a1a1a;
+    color: #fff;
+    border-bottom: 2px solid #ff2d2d;
+}
+.drawer-dark .drawer-close {
+    color: #ff2d2d;
+}
+.drawer-dark .drawer-item {
+    border-bottom: 1px solid #292929;
+    color: #fff;
+}
+.drawer-dark .drawer-item:hover {
+    background: #ff2d2d22;
+}
+.drawer-dark .drawer-empty {
+    color: #bbb;
+}
