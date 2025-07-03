@@ -3,8 +3,14 @@ import Header from './components/Header';
 import ChatArea from './components/ChatArea';
 import ChatInput from './components/ChatInput';
 
+export interface MessageType {
+    text: string;
+    fromUser: boolean;
+    loading?: boolean;
+}
+
 const App: React.FC = () => {
-    const [messages, setMessages] = useState<{ text: string; fromUser: boolean }[]>([]);
+    const [messages, setMessages] = useState<MessageType[]>([]);
     const [input, setInput] = useState('');
     const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
@@ -12,11 +18,32 @@ const App: React.FC = () => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
     }, [messages]);
 
-    const handleSend = (e: React.FormEvent) => {
+    const handleSend = async (e: React.FormEvent) => {
         e.preventDefault();
         if (input.trim() === '') return;
-        setMessages([...messages, { text: input, fromUser: true }]);
+
+        // Add user message
+        setMessages(prev => [...prev, { text: input, fromUser: true }]);
         setInput('');
+
+        // Add loading message
+        setMessages(prev => [
+            ...prev,
+            { text: '', fromUser: false, loading: true }
+        ]);
+
+        // Simulate backend delay
+        setTimeout(() => {
+            setMessages(prev => {
+                // Remove the last loading message
+                const updated = prev.filter((msg, idx) => !(idx === prev.length - 1 && msg.loading));
+                // Add backend response
+                return [
+                    ...updated,
+                    { text: 'You just sent a prompt!', fromUser: false }
+                ];
+            });
+        }, 1200); // 1.2 seconds delay
     };
 
     return (
