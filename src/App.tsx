@@ -3,7 +3,6 @@ import Header from './components/Header';
 import ChatArea from './components/ChatArea';
 import ChatInput from './components/ChatInput';
 import Drawer from './components/Drawer';
-import moonStar from '../assets/moon-star.svg'; // Add this line if you add an SVG asset
 
 export interface MessageType {
     text: string;

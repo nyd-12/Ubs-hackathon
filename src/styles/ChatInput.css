@@ -3,54 +3,66 @@ header {
 }
 
 .chat-input-form {
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    align-items: center;
-    padding: 1.2rem 1.5rem;
-    background: #fff;
-    border-top: 1px solid #e3e3e7;
-    margin: 0 auto;
-    border-radius: 12px 12px 0 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Adds spacing between input and button */
+  padding: 12px 16px;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .chat-input {
-    flex: 1;
-    border: 1px solid #35363f; /* dark border */
-    outline: none;
-    padding: 1.2rem 0.9rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    background: transparent;
-    color: #e6e6ea;
-    box-shadow: none;
-    min-height: 44px;
-    max-height: 120px;
-    line-height: 1.5;
-    resize: none;
+  flex: 1;
+  border: 1px solid #35363f;
+  outline: none;
+  padding: 1.2rem 0.9rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  background: transparent;
+  color: #e6e6ea;
+  box-shadow: none;
+  min-height: 44px;
+  max-height: 120px;
+  line-height: 1.5;
+  resize: none;
 }
 
 .chat-input:focus {
-    border-color: #444857; /* slightly lighter on focus */
-    background: transparent;
+  border-color: #444857;
+  background: transparent;
+}
+
+.chat-send-btn,
+.send-button {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .chat-send-btn {
-    background: #23272f;
-    color: #fff;
-    border: none;
-    padding: 0.85rem 2.2rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: #23272f;
+  font-size: 1.1rem;
 }
 
 .chat-send-btn:hover {
-    background: #444857;
-    color: #fff;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  background: #444857;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.send-button {
+  background: #007bff;
+}
+
+.send-button:hover {
+  background: #0056b3;
 }
