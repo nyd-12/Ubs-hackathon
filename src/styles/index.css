@@ -22,9 +22,11 @@ body {
     align-items: center;
     width: 100%;
     background: #23242a; /* blend with background */
-    overflow: hidden;
-    margin-top: 24px;
-    padding-bottom: 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 120px;
+    min-height: 0;
+    position: relative;
 }
 
 .chat-area {
@@ -33,6 +35,9 @@ body {
     border-radius: 12px;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
     border: 1px solid #e3e3e7;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .chat-empty {
@@ -46,11 +51,22 @@ body {
 .chat-input-form {
     background: #fff;
     border-top: 1px solid #e3e3e7;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    box-shadow: 0 -2px 12px 0 rgba(0,0,0,0.08);
     border-radius: 12px 12px 0 0;
-    display: flex; /* Add flex to align input and button */
-    gap: 0.75rem;  /* Add space between input and button */
-    padding: 1rem;  /* Optional: add padding inside the form */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: calc(100% - 2rem);
+    max-width: 700px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px);
+    margin: 0 1rem;
 }
 
 .chat-input {
@@ -59,12 +75,18 @@ body {
     box-shadow: none;
     border: 1px solid #d1d5db;
     font-weight: 500;
+    flex: 1;
+    border-radius: 8px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1rem;
+    line-height: 1.2;
 }
 
 .chat-input:focus {
     box-shadow: 0 0 0 2px #a3a3b3;
     border-color: #a3a3b3;
     background: #fff;
+    outline: none;
 }
 
 .chat-send-btn {
@@ -74,9 +96,13 @@ body {
     font-weight: 700;
     letter-spacing: 0.5px;
     border-radius: 8px;
-    padding: 0.85rem 2.2rem;
+    padding: 0.9rem 1.8rem;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    font-size: 1rem;
+    line-height: 1.2;
+    white-space: nowrap;
+    min-width: fit-content;
 }
 
 .chat-send-btn:hover {
@@ -96,6 +122,9 @@ body {
     display: flex;
     align-items: center;
     padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-red, .header-white {
