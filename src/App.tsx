@@ -23,7 +23,6 @@ const App: React.FC = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
     const [chatHistory, setChatHistory] = useState<ChatHistory[]>([]);
     const [currentChatId, setCurrentChatId] = useState<number | null>(null);
-    const [mode, setMode] = useState<'light' | 'dark'>('light');
     const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
@@ -87,50 +86,15 @@ const App: React.FC = () => {
     };
 
     return (
-        <div className={`app-container app-${mode}`}>
+        <div className="app-container">
             <Header onOpenDrawer={handleOpenDrawer} />
             <Drawer
                 open={drawerOpen}
                 onClose={handleCloseDrawer}
                 chats={chatHistory.map(c => ({ id: c.id, title: c.title }))}
                 onSelectChat={handleSelectChat}
-                mode={mode}
             />
             <main className="main-content">
-                <div style={{ position: 'absolute', top: 20, right: 30, zIndex: 2000 }}>
-                    <label className="mode-switch">
-                        <input
-                            type="checkbox"
-                            checked={mode === 'dark'}
-                            onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
-                        />
-                        <span className="slider">
-                            {mode === 'dark' ? (
-                                // Moon SVG for dark mode
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="14" cy="14" r="12" fill="#fff" stroke="#ff2d2d" strokeWidth="2" />
-                                    <path d="M19 14c0 2.76-2.24 5-5 5a5 5 0 010-10c.34 0 .67.03 1 .08A6 6 0 1019 14z" fill="#ff2d2d" />
-                                    <circle cx="20.5" cy="9.5" r="1.5" fill="#ff2d2d" />
-                                </svg>
-                            ) : (
-                                // Sun SVG for light mode
-                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="14" cy="14" r="8" fill="#ff2d2d" stroke="#ff2d2d" strokeWidth="2" />
-                                    <g stroke="#ff2d2d" strokeWidth="2">
-                                        <line x1="14" y1="2" x2="14" y2="7" />
-                                        <line x1="14" y1="21" x2="14" y2="26" />
-                                        <line x1="2" y1="14" x2="7" y2="14" />
-                                        <line x1="21" y1="14" x2="26" y2="14" />
-                                        <line x1="5.22" y1="5.22" x2="8.7" y2="8.7" />
-                                        <line x1="19.3" y1="19.3" x2="22.78" y2="22.78" />
-                                        <line x1="5.22" y1="22.78" x2="8.7" y2="19.3" />
-                                        <line x1="19.3" y1="8.7" x2="22.78" y2="5.22" />
-                                    </g>
-                                </svg>
-                            )}
-                        </span>
-                    </label>
-                </div>
                 <ChatArea messages={messages} messagesEndRef={messagesEndRef} />
                 <ChatInput input={input} setInput={setInput} handleSend={handleSend} />
             </main>
