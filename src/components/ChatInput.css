@@ -1,0 +1,31 @@
+.chat-input-form {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Adds spacing between input and button */
+    padding: 12px 16px;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chat-input-box {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.send-button {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.send-button:hover {
+    background: #0056b3;
+}

@@ -1,18 +1,17 @@
-﻿/* Basic global styles */
+﻿/* Global styles: clean, neutral, no gradients, no red */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f6fa;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #23242a; /* deep grey */
 }
 
 .app-container {
     min-height: 100vh;
     width: 100vw;
-    background: linear-gradient(135deg, #18171c 0%, #2a1a1a 100%);
+    background: #23242a; /* deep grey */
     display: flex;
     flex-direction: column;
-    color: #fff;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #e6e6ea;
 }
 
 .main-content {
@@ -22,146 +21,129 @@ body {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    background: rgba(24, 23, 28, 0.92);
+    background: #23242a; /* blend with background */
     overflow: hidden;
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
-    border-radius: 32px 32px 0 0;
     margin-top: 24px;
     padding-bottom: 24px;
 }
 
 .chat-area {
-    background: linear-gradient(120deg, #23232a 80%, #18171c 100%);
-    color: #fff;
-    border-radius: 24px;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-    border: 1.5px solid #292929;
+    background: #27272a;
+    color: #23272f;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
+    border: 1px solid #e3e3e7;
 }
 
 .chat-empty {
-    color: #bbb;
+    color: #b0b3bb;
     font-weight: 500;
-    background: #23232a;
-    border-radius: 16px;
+    background: #f4f4f8;
+    border-radius: 10px;
     margin: 0 1.5rem;
 }
 
 .chat-input-form {
-    background: linear-gradient(90deg, #23232a 70%, #18171c 100%);
-    border-top: 2px solid #ff2d2d;
-    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
-    border-radius: 18px 18px 0 0;
+    background: #fff;
+    border-top: 1px solid #e3e3e7;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    border-radius: 12px 12px 0 0;
+    display: flex; /* Add flex to align input and button */
+    gap: 0.75rem;  /* Add space between input and button */
+    padding: 1rem;  /* Optional: add padding inside the form */
 }
 
 .chat-input {
-    background: #18171c;
-    color: #fff;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
-    border: 1.5px solid #292929;
+    background: #f4f4f8;
+    color: #23272f;
+    box-shadow: none;
+    border: 1px solid #d1d5db;
     font-weight: 500;
 }
 
 .chat-input:focus {
-    box-shadow: 0 0 0 2px #ff2d2d55;
-    border-color: #ff2d2d;
-    background: #23232a;
+    box-shadow: 0 0 0 2px #a3a3b3;
+    border-color: #a3a3b3;
+    background: #fff;
 }
 
 .chat-send-btn {
-    background: linear-gradient(90deg, #ff2d2d 60%, #23232a 100%);
+    background: #23272f;
     color: #fff;
-    border: 1.5px solid #ff2d2d;
-    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
+    border: none;
     font-weight: 700;
     letter-spacing: 0.5px;
-    text-shadow: 0 1px 4px #ff2d2d44;
+    border-radius: 8px;
+    padding: 0.85rem 2.2rem;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
 }
 
 .chat-send-btn:hover {
-    background: linear-gradient(90deg, #23232a 60%, #ff2d2d 100%);
-    color: #ff2d2d;
-    border: 1.5px solid #ff2d2d;
-    box-shadow: 0 4px 16px 0 #ff2d2d33;
+    background: #444857;
+    color: #fff;
 }
 
 .header {
-    background: linear-gradient(90deg, #18171c 80%, #2a1a1a 100%);
-    color: #fff;
-    border-bottom: 2.5px solid #ff2d2d;
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.18);
-    border-radius: 0 0 24px 24px;
-    font-size: 2.1rem;
-    letter-spacing: 2px;
+    background: #23272f; /* deep dark grey */
+    color: #23272f;
+    border-bottom: 1px solid #e3e3e7;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+    border-radius: 0 0 12px 12px;
+    font-size: 2rem;
+    letter-spacing: 1px;
     font-family: 'Segoe UI Semibold', 'Roboto', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 2rem;
 }
 
-.header-red {
-    color: #ff2d2d;
-    text-shadow: 0 2px 8px #ff2d2d33;
-}
-
-.header-white {
-    color: #fff;
-    text-shadow: 0 2px 8px #ff2d2d22;
-}
-
-.message.user {
-    background: linear-gradient(90deg, #ff2d2d 80%, #23232a 100%);
-    color: #fff;
-    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.10);
-    border-radius: 18px 18px 4px 18px;
-    font-weight: 600;
-}
-
-.message.bot {
-    background: linear-gradient(90deg, #23232a 80%, #18171c 100%);
-    color: #fff;
-    border: 1.5px solid #292929;
-    box-shadow: 0 2px 8px 0 rgba(255,45,45,0.06);
-    border-radius: 18px 18px 18px 4px;
-    font-weight: 500;
+.header-red, .header-white {
+    color: #ffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    font-weight: 700;
+    margin-right: 0.5rem;
 }
 
 .drawer {
-    background: linear-gradient(120deg, #23232a 80%, #18171c 100%);
-    color: #fff;
-    box-shadow: 2px 0 16px 0 rgba(0,0,0,0.18);
-    border-radius: 0 24px 24px 0;
+    background: #f7f7fa;
+    color: #23272f;
+    box-shadow: 2px 0 16px 0 rgba(0,0,0,0.08);
+    border-radius: 0 12px 12px 0;
 }
 
 .drawer .drawer-header {
-    background: linear-gradient(90deg, #18171c 80%, #2a1a1a 100%);
-    color: #fff;
-    border-bottom: 2px solid #ff2d2d;
-    font-size: 1.3rem;
+    background: #fff;
+    color: #23272f;
+    border-bottom: 1px solid #e3e3e7;
+    font-size: 1.2rem;
     font-weight: 700;
-    border-radius: 0 24px 0 0;
+    border-radius: 0 12px 0 0;
 }
 
 .drawer .drawer-close {
-    color: #ff2d2d;
+    color: #a3a3b3;
 }
 
 .drawer .drawer-item {
-    border-bottom: 1px solid #292929;
-    color: #fff;
-    background: #23232a;
+    border-bottom: 1px solid #e3e3e7;
+    color: #23272f;
+    background: #fff;
     font-weight: 500;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 0 8px;
     transition: background 0.2s, color 0.2s;
 }
 
 .drawer .drawer-item:hover {
-    background: linear-gradient(90deg, #ff2d2d22 60%, #23232a 100%);
-    color: #ff2d2d;
+    background: #ececf1;
+    color: #23272f;
 }
 
 .drawer .drawer-empty {
-    color: #bbb;
+    color: #b0b3bb;
     font-weight: 500;
-    background: #23232a;
-    border-radius: 12px;
+    background: #f4f4f8;
+    border-radius: 8px;
     margin: 1rem;
 }

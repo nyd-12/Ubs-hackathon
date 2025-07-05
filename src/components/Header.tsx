@@ -1,31 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Header.css';
-import Drawer from './Drawer';
 
-const Header: React.FC<{
-    onOpenDrawer?: () => void;
-}> = ({ onOpenDrawer }) => (
-    <header className="header">
-        <button
-            className="drawer-toggle-btn"
-            onClick={onOpenDrawer}
-            aria-label="Open chat history drawer"
-            style={{
-                background: 'none',
-                border: 'none',
-                color: '#ff2d2d',
-                fontSize: '1.7rem',
-                fontWeight: 700,
-                marginRight: '1.2rem',
-                cursor: 'pointer',
-                verticalAlign: 'middle',
-            }}
-        >
-            &#9776;
-        </button>
-        <span className="header-red">Red</span>
-        <span className="header-white">Bot</span>
-    </header>
+interface HeaderProps {
+  onOpenDrawer: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ onOpenDrawer }) => (
+  <header className="header">
+    <button
+      className="drawer-toggle-btn"
+      aria-label="Open chat history"
+      onClick={onOpenDrawer}
+      type="button"
+    >
+      {/* Simple hamburger icon */}
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <rect y="6" width="28" height="3" rx="1.5" fill="#a3a3b3"/>
+        <rect y="13" width="28" height="3" rx="1.5" fill="#a3a3b3"/>
+        <rect y="20" width="28" height="3" rx="1.5" fill="#a3a3b3"/>
+      </svg>
+    </button>
+    <span className="header-white">Smart-Stacks</span>
+  </header>
 );
 
 export default Header;

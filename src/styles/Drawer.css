@@ -1,17 +1,18 @@
-/* Drawer styles for chat history */
+/* Drawer styles for chat history: neutral, no red, no gradients */
 .drawer {
     position: fixed;
     top: 0;
     left: -320px;
     width: 300px;
     height: 100vh;
-    background: #232323;
-    color: #fff;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
+    background: #f7f7fa;
+    color: #23272f;
+    box-shadow: 2px 0 16px rgba(0,0,0,0.08);
     z-index: 1000;
     transition: left 0.3s cubic-bezier(0.4,0,0.2,1);
     display: flex;
     flex-direction: column;
+    border-radius: 0 12px 12px 0;
 }
 .drawer.open {
     left: 0;
@@ -23,13 +24,15 @@
     padding: 1.2rem 1.5rem;
     font-size: 1.2rem;
     font-weight: 700;
-    border-bottom: 2px solid #ff2d2d;
-    background: #1a1a1a;
+    border-bottom: 1px solid #e3e3e7;
+    background: #fff;
+    color: #23272f;
+    border-radius: 0 12px 0 0;
 }
 .drawer-close {
     background: none;
     border: none;
-    color: #ff2d2d;
+    color: #a3a3b3;
     font-size: 2rem;
     cursor: pointer;
     font-weight: bold;
@@ -44,64 +47,21 @@
 .drawer-item {
     padding: 1rem 1.5rem;
     cursor: pointer;
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid #e3e3e7;
     transition: background 0.2s;
+    color: #23272f;
+    background: #fff;
+    border-radius: 8px;
+    margin: 0 8px;
 }
 .drawer-item:hover {
-    background: #ff2d2d22;
+    background: #ececf1;
 }
 .drawer-empty {
-    color: #bbb;
+    color: #b0b3bb;
     text-align: center;
     padding: 2rem 0;
-}
-
-/* Light mode: only white and red */
-.drawer-light {
-    background: #fff;
-    color: #ff2d2d;
-    box-shadow: 2px 0 16px rgba(255,45,45,0.10);
-}
-.drawer-light .drawer-header {
-    background: #fff;
-    color: #ff2d2d;
-    border-bottom: 2px solid #ff2d2d;
-}
-.drawer-light .drawer-close {
-    color: #ff2d2d;
-}
-.drawer-light .drawer-item {
-    border-bottom: 1px solid #ff2d2d22;
-    color: #ff2d2d;
-}
-.drawer-light .drawer-item:hover {
-    background: #ff2d2d11;
-}
-.drawer-light .drawer-empty {
-    color: #ff2d2d88;
-}
-
-/* Dark mode: original, but more contrast */
-.drawer-dark {
-    background: #232323;
-    color: #fff;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.18);
-}
-.drawer-dark .drawer-header {
-    background: #1a1a1a;
-    color: #fff;
-    border-bottom: 2px solid #ff2d2d;
-}
-.drawer-dark .drawer-close {
-    color: #ff2d2d;
-}
-.drawer-dark .drawer-item {
-    border-bottom: 1px solid #292929;
-    color: #fff;
-}
-.drawer-dark .drawer-item:hover {
-    background: #ff2d2d22;
-}
-.drawer-dark .drawer-empty {
-    color: #bbb;
+    background: #f4f4f8;
+    border-radius: 8px;
+    margin: 1rem;
 }
